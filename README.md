@@ -1,6 +1,6 @@
 # Vue shop: Vue + Typescript
 
-Simulation of the front end of a store. It uses the Platzy testing API, the connections to this API are made using axios.
+Simulation of the front end of a store. It uses the Platzi testing API, the connections to this API are made using axios.
 
 ## Project setup
 ```

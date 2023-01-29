@@ -13,7 +13,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Acceder</button>
         </form>
-    </div>
+    </div> 
 </template>
 
 <script lang="ts">
@@ -38,12 +38,15 @@ export default defineComponent ({
 </script>
 
 <style scoped>
+.login-bg {
+    background-color: #ffe9e9;
+}
 .title {
-  font-size:40px;
+  font-size:2rem;
   margin: 2rem;
   font-style:inherit;
   text-align: center;
-  color: #166f7b;
+  color: #292929;
 }
 .form {
 margin: 3rem auto;
@@ -53,13 +56,32 @@ justify-content: center;
 width: 20%;
 min-width: 350px;
 max-width: 100%;
-background: rgba(203, 216, 225, 0.9);
-border-radius: 5px;
+background: #f9f9f9;
+border-radius: 25px;
 padding: 40px;
 box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.3);
 }
 button{
-  border: #166f7b;
-  background: #166f7b;
+border: #30ffba;
+background: #30ffba;
+color: #06132b;
+border-radius: 30px;
+padding: 10px;
+}
+button:a {
+cursor: pointer;
+background-image: linear-gradient(80deg, #2be5a7, rgb(114, 213, 155));
+}
+button:hover {
+cursor: pointer;
+background-image: linear-gradient(80deg, rgb(43, 229, 167), rgb(114, 213, 155));
+color: #06132b;
+}
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #30ffba;
+    --bs-btn-border-color: #30ffba;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #30ffba;
 }
 </style>

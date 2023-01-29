@@ -11,16 +11,16 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-    name: "CustomCard",
+    name: "CustomBtn",
 })
 </script>
 
 <style scoped>
 a:hover {
-  color:#37a4b5;
+  color: #0f9569;
 }
 a {
-  color:#248695;
+  color:#06132b;
   width: 160px;
 }
 </style>

@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import  NavBar  from "./components/NavBar.vue";
+import NavBar from "./components/NavBar.vue";
 
 export default defineComponent({
   name: "AppComponent",
@@ -26,6 +26,6 @@ export default defineComponent({
   color: #05203b;
 }
 nav a.router-link-exact-active {
-  color: #166e7b;
+  color: #2be5a7;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
-    <header class="h2">
-        <div>
-            <img src="../assets/logo_vueshop.png" alt="logo shop" width="190">
+    <header>
+        <div class="header-logo">
+            <img src="../assets/logo_vueshop.png" alt="logo shop" width="140">
         </div>
     </header>
 </template>
@@ -35,6 +35,9 @@ nav {
     background-color: white;
     color: rgb(0,0,0);
     font-weight: bold;
+}
+.header-logo {
+    padding-top: 20px;
 }
     
 p {

@@ -68,7 +68,6 @@ export default defineComponent({
 
 <style scoped>
 .detailView {
-    margin-top: -40px;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;

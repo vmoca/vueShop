@@ -49,10 +49,9 @@
 .card-title {
   font-size: 30px;
   font-weight: bold;
-  color: #137b8b;
+  color: #292929;
 }
 .profileView {
-    margin-top: -40px;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;

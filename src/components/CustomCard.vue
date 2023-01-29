@@ -21,8 +21,8 @@ export default defineComponent({
 .card {
   width: 30rem;
   min-height:200px;
-  border:1px solid rgb(243, 239, 239);
+  border:0px solid rgba(0, 0, 0, 0.175);
   border-radius: 1rem;
-  box-shadow: 0px 10px 10px rgba(110, 108, 108, 0.2);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 </style>

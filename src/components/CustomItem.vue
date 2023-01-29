@@ -6,7 +6,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ product.id }} - {{ product.title }}</h5>
                 <p class="card-text">Precio: € {{ product.price }}</p>
-                <a class="card-link"  @click="$emit('goDetail', product)">Obtener más detalles</a>
+                <button type="button" class="btn btn-info"><a class="card-link"  @click="$emit('goDetail', product)">Obtener más detalles</a></button>
             </div>
             </div>
         </div>
@@ -28,20 +28,45 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
 .product-item {
-    position: relative;
-    margin-top: 20px;
-    margin-left: 20px;
-    width: 300px;
-    display: flex;
-    }
+position: relative;
+margin: 20px 10px 0;
+width: 300px;
+display: flex;
+}
 .card-link {
-    color:#248695;
+color:#06132b;
+text-decoration: none;
 }
 .card-title {
-    color:#137b8b;
-    font-size: 20px;
-    font-weight: bold;
+color:#292929;
+font-size: 20px;
+font-weight: bold;
+}
+
+button{
+border: #30ffba;
+background: #30ffba;
+color: #06132b;
+border-radius: 30px;
+padding: 10px 20px;
+}
+button:a {
+cursor: pointer;
+background-image: linear-gradient(80deg, #2be5a7, rgb(114, 213, 155));
+}
+button:hover {
+cursor: pointer;
+background-image: linear-gradient(80deg, rgb(43, 229, 167), rgb(114, 213, 155));
+color: #06132b;
+}
+.btn-info {
+--bs-btn-color: #fff;
+--bs-btn-bg: #30ffba;
+--bs-btn-border-color: #30ffba;
+--bs-btn-hover-color: #fff;
+--bs-btn-hover-bg: #30ffba;
 }
 </style>
 

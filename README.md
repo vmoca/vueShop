@@ -1,4 +1,6 @@
-# vue-shop
+# Vue shop: Vue + Typescript
+
+Simulation of the front end of a store. It uses the Platzy testing API, the connections to this API are made using axios.
 
 ## Project setup
 ```
@@ -19,6 +21,11 @@ npm run build
 ```
 npm run lint
 ```
+
+### Credentials for login
+
+- Email - "john@mail.com" / Password - "changeme"
+- Email - "nico@gmail.com" / Password - "1234"
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

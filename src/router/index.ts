@@ -1,19 +1,38 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import haveRoleGuard from './authSave';
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
-    name: 'home',
+    path: "/",
+    name: "home",
+    beforeEnter: [haveRoleGuard],
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: "/profile",
+    name: "profile",
+    beforeEnter: [haveRoleGuard],
+    component: () => import(/* webpackChunkName: "profile" */ "../views/ProfileView.vue")
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: () => import(/* webpackChunkName: "about" */ "../views/LoginView.vue")
+  },
+  {
+    path: "/detail/:id",
+    name: "detail",
+    beforeEnter: [haveRoleGuard],
+    component: () => import(/* webpackChunkName: "detail" */ "../views/DetailView.vue"),
+    props: (route) => {
+      const id = Number(route.params.id)
+      return isNaN(id) ?  { id: null } : { id }
+    }
+  },
+  {
+    path: "/:pathMatch(.*)",
+    component: () => import(/* webpackChunkName: "notFound" */ "../views/NotFoundView.vue"),
   }
 ]
 
@@ -22,4 +41,4 @@ const router = createRouter({
   routes
 })
 
-export default router
+export default router;
